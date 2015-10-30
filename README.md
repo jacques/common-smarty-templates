@@ -15,3 +15,5 @@ your webroot.
    POST / PUT / DELETE actions it passes the CSRF token along.
 
  * header-shims.tpl - Legacy IE bits served up by Max CDN.
+
+ * staging-ribbon.tpl - Shows a staging ribbon onto a page.
