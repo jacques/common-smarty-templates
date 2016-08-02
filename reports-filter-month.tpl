@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
-  <div class="form-group">
+  <div class="form-group dynamic-date-filter" id="monthFilter">
     <label class="sr-only" for="month">Month</label>
     <select name="month" class="form-control">
 {foreach $months item=row}
