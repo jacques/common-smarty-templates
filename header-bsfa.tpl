@@ -7,9 +7,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
-{assign var="bootstrap_version" value="3.3.6"}
-{assign var="bootstrap_sha256" value="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw="}
-{assign var="bootstrap_sha512" value="sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="}
+{assign var="bootstrap_version" value="3.3.7"}
+{assign var="bootstrap_sha256" value="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="}
+{assign var="bootstrap_sha512" value="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="}
 {assign var="fontawesome_version" value="4.5.0"}
 {assign var="fontawesome_sha256" value="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU="}
 {assign var="fontawesome_sha512" value="sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg=="}
