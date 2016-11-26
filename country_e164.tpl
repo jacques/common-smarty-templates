@@ -6,15 +6,15 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
         <option value="" disabled="disabled">Select</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="AF">Afghanistan (+93)</option>
         <option value="AL">Albania (+355)</option>
         <option value="DZ">Algeria (+213)</option>
         <option value="AS">American Samoa (+1684)</option>
         <option value="AD">Andorra (+376)</option>
-*}
+{/if}
         <option value="AO">Angola (+244)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="AI">Anguilla (+1264)</option>
         <option value="AQ">Antartica (+672)</option>
         <option value="AG">Antigua and Barbuda (+1268)</option>
@@ -37,10 +37,10 @@
         <option value="BT">Bhutan (+975)</option>
         <option value="BO">Bolivia (+591)</option>
         <option value="BQ">Bonaire, Sint Eustatius, and Saba (+599)</option>
-        <option value="BA">Bosnia and Herzegovina (+387)</option>
-*}
+        <option value="BA">Bosnia and Herzegovina (+387)</option>;{*}
+{/if}
         <option value="BW">Botswana (+267)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
 <!--        <option value="BV">Bouvet Island</option>-->
         <option value="BR">Brazil (+55)</option>
         <option value="IO">British Indian Ocean Territory (+246)</option>
@@ -68,9 +68,9 @@
         <option value="CW">Curacao (+5999)</option>
         <option value="CY">Cyprus (+357)</option>
         <option value="CZ">Czech Republic (+420)</option>
-*}
+{/if}
         <option value="CD">Democratic Republic of the Congo (+243)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="DK">Denmark (+45)</option>
         <option value="DG">Diego Garcia</option>
         <option value="DJ">Djibouti (+253)</option>
@@ -133,9 +133,9 @@
         <option value="LA">Laos (+856)</option>
         <option value="LV">Latvia (+371)</option>
         <option value="LB">Lebanon (+961)</option>
-*}
+{/if}
         <option value="LS">Lesotho (+266)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="LR">Liberia (+231)</option>
         <option value="LY">Libya (+218)</option>
         <option value="LI">Liechtenstein (+423)</option>
@@ -143,10 +143,10 @@
         <option value="LU">Luxembourg (+352)</option>
         <option value="MO">Macau (+853)</option>
         <option value="MK">Macedonia (+389)</option>
-*}
+{/if}
         <option value="MG">Madagascar (+261)</option>
         <option value="MW">Malawi (+265)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="MY">Malaysia (+60)</option>
         <option value="MV">Maldives (+960)</option>
         <option value="ML">Mali (+223)</option>
@@ -154,9 +154,9 @@
         <option value="MH">Marshall Islands (+692)</option>
         <option value="MQ">Martinique (+596)</option>
         <option value="MR">Mauritania (+222)</option>
-*}
+{/if}
         <option value="MU">Mauritius (+230)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="YT">Mayotte (+269)</option>
         <option value="MX">Mexico (+52)</option>
         <option value="FM">Micronesia (+691)</option>
@@ -166,13 +166,13 @@
         <option value="ME">Montenegro (+382)</option>
         <option value="MS">Montserrat (+1664)</option>
         <option value="MA">Morocco (+212)</option>
-*}
+{/if}
         <option value="MZ">Mozambique (+258)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="MM">Myanmar (+95)</option>
-*}
+{/if}
         <option value="NA">Namibia (+264)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="NR">Nauru (+674)</option>
         <option value="NP">Nepal (+977)</option>
         <option value="NL">Netherlands (+31)</option>
@@ -217,9 +217,9 @@
         <option value="SA">Saudi Arabia (+966)</option>
         <option value="SN">Senegal (+221)</option>
         <option value="RS">Serbia (+381)</option>
-*}
+{/if}
         <option value="SC">Seychelles (+248)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="SL">Sierra Leone (+232)</option>
         <option value="SG">Singapore (+65)</option>
         <option value="SX">???SX???</option>
@@ -227,9 +227,9 @@
         <option value="SI">Slovenia (+386)</option>
         <option value="SB">Solomon Islands (+677)</option>
         <option value="SO">Somalia (+252)</option>
-*}
+{/if}
         <option value="ZA">South Africa (+27)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="GS">South Georgia and the South Sandwich Islands</option>
         <option value="KR">South Korea (+82)</option>
         <option value="SS">South Sudan ()</option>
@@ -238,17 +238,17 @@
         <option value="SD">Sudan (+249)</option>
         <option value="SR">Suriname (+597)</option>
         <option value="SJ">Svalbard and Jan Mayen</option>
-*}
+{/if}
         <option value="SZ">Swaziland (+268)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="SE">Sweden (+46)</option>
         <option value="CH">Switzerland (+41)</option>
         <option value="SY">Syria (+963)</option>
         <option value="TW">Taiwan (+886)</option>
         <option value="TJ">Tajikistan (+992)</option>
-*}
+{/if}
         <option value="TZ">Tanzania (+255)</option>
-{*
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="TH">Thailand (+66)</option>
         <option value="TG">Togo (+228)</option>
         <option value="TK">Tokelau (+690)</option>
@@ -276,6 +276,6 @@
         <option value="WF">Wallis and Futuna (+681)</option>
         <option value="EH">Western Sahara</option>
         <option value="YE">Yemen (+967)</option>
-*}
+{/if}
         <option value="ZM">Zambia (+260)</option>
         <option value="ZW">Zimbabwe (+263)</option>

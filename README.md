@@ -9,6 +9,7 @@ your webroot.
 
 | Filename               | Description |
 | ---------------------- | ----------- |
+| country_e164.tpl | Dropdowns of country codes.  Pass in filter_sadc=true to filter for [SADC](https://en.wikipedia.org/wiki/Southern_African_Development_Community) countries |
 | footer-datepicker.tpl | Include the bootstrap-datepicker javascript includes. |
 | footer-jqbs.tpl | Include jquery and bootstrap javascript files. |
 | gauges.tpl | include gaug.es tracking code |
