@@ -8,7 +8,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
 {assign var="bootstrap_js_version" value="3.3.7"}
-{assign var="bootstrap_js_sha384" value="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+{assign var="bootstrap_js_sha384" value="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"}
 {assign var="jquery_version" value="2.2.4"}
 {assign var="jquery_sha384" value="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"}
 {if isset($usecdn) && true == $usecdn}
