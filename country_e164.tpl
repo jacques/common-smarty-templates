@@ -37,7 +37,7 @@
         <option value="BT">Bhutan (+975)</option>
         <option value="BO">Bolivia (+591)</option>
         <option value="BQ">Bonaire, Sint Eustatius, and Saba (+599)</option>
-        <option value="BA">Bosnia and Herzegovina (+387)</option>;{*}
+        <option value="BA">Bosnia and Herzegovina (+387)</option>
 {/if}
         <option value="BW">Botswana (+267)</option>
 {if isset($filter_sadc) && true === $filter_sadc}
@@ -60,7 +60,9 @@
         <option value="CX">Christmas Island</option>
         <option value="CC">Cocos (Keeling) Islands ()</option>
         <option value="CO">Colombia (+57)</option>
+{/if}
         <option value="KM">Comoros (+269)</option>
+{if isset($filter_sadc) && true === $filter_sadc}
         <option value="CK">Cook Islands (+682)</option>
         <option value="CR">Costa Rica (+506)</option>
         <option value="HR">Croatia (+385)</option>
