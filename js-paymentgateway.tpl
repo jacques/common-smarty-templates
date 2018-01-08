@@ -7,6 +7,7 @@
  *
  * Copyright 2017-2018 Jacques Marneweck.  All rights strictly reserved.
  *}
+<script>
 {if isset($cardunload) && true == $cardunload}
 {literal}
 jQuery(document).ready(function() {
@@ -52,3 +53,4 @@ jQuery(document).ready(function() {
 });
 {/literal}
 {/if}
+</script>
