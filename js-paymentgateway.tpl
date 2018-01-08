@@ -7,7 +7,7 @@
  *
  * Copyright 2017-2018 Jacques Marneweck.  All rights strictly reserved.
  *}
-{if isset($cardunload) && true == $cardunload)}
+{if isset($cardunload) && true == $cardunload}
 {literal}
 jQuery(document).ready(function() {
   $('#payment_method').change(function() {
