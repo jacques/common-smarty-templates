@@ -1,5 +1,8 @@
 # Common Smarty Templates
 
+[![Author](http://img.shields.io/badge/author-@jacques-blue.svg?style=flat-square)](https://twitter.com/jacques)
+[![Software License](https://img.shields.io/badge/license-MPLv2-brightgreen.svg?style=flat-square)](LICENSE)
+
 Common templates extracted from Piranha and utilised in multiple places.
 
 It assumes that you are using bower to install Bootstrap, Font Awesome, etc. under
@@ -9,7 +12,7 @@ your webroot.
 
 | Filename               | Description |
 | ---------------------- | ----------- |
-| country_e164.tpl | Dropdowns of country codes.  Pass in filter_sadc=true to filter for [SADC](https://en.wikipedia.org/wiki/Southern_African_Development_Community) countries |
+| country_e164.tpl | Dropdowns of country codes.  Pass in filter_sadc=true to filter for [SADC](https://en.wikipedia.org/wiki/Southern_African_Development_Community) countries. Dropdown selection takes field parameter (i.e. if you use mobile_phone_country for this, use like field="mobile_phone_country" when including the template. |
 | csrf.tpl | Output CSRF token and variable name.  Assumes these variables are assigned to Smarty. |
 | footer-datepicker.tpl | Include the bootstrap-datepicker javascript includes. |
 | footer-jqbs.tpl | Include jquery 2.1.4 and bootstrap 3.3.7 javascript files. |
