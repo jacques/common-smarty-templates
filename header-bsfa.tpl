@@ -19,7 +19,7 @@
 {if isset($usecdn) && true == $usecdn}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/{$bootstrap_version}/css/bootstrap.min.css" rel="stylesheet" integrity="{$bootstrap_sha256} {$bootstrap_sha512}" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/{$fontawesome_version}/js/all.js" integrity="{$fontawesome_sha256} {$fontawesome_sha512}" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/{fontawesome_version}/js/v4-shims.js" integrity="{$fontawesome_sha256} {$fontawesome_sha512}" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/{$fontawesome_version}/js/v4-shims.js" integrity="{$fontawesome_sha256} {$fontawesome_sha512}" crossorigin="anonymous"></script>
 {else}
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css?v={$bootstrap_version}" rel="stylesheet" integrity="{$bootstrap_sha256} {$bootstrap_sha512}" crossorigin="anonymous">
     <script defer src="/vendor/fontawesome/svg-with-js/js/fontawesome-all.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
