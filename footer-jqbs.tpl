@@ -7,8 +7,22 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
-{assign var="bootstrap_js_version" value="3.3.7"}
+{if !isset($boottrap_version)}
+{assign var="bootstrap_version" value="3.3.7"}
+{/if}
+{if '4.1.3' == $bootstrap_version}
+{assign var="jquery_sha384" value="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"}
+{elseif '4.1.2' == $bootstrap_version}
+{assign var="jquery_sha384" value="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"}
+{elseif '4.1.1' == $bootstrap_version}
+{assign var="jquery_sha384" value="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"}
+{elseif '4.1.0' == $bootstrap_version}
+{assign var="jquery_sha384" value="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"}
+{elseif '4.0.0' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"}
+{elseif '3.3.7' == $bootstrap_version}
 {assign var="bootstrap_js_sha384" value="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"}
+{/if}
 {assign var="jquery_version" value="2.2.4"}
 {assign var="jquery_sha384" value="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"}
 {if isset($usecdn) && true == $usecdn}
