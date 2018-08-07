@@ -23,6 +23,7 @@ your webroot.
 | header-csrf.tpl | Add metadata to work with jquery-ui-rails so when doing POST / PUT / DELETE actions it passes the CSRF token along. |
 | header-shims.tpl   | Legacy IE bits served up by Max CDN. |
 | js-paymentgateway.tpl | Switch div layers based on payment method selected on a form. |
+| meta-ie.tpl | IE Comptibility Mode to Edge [see this post](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e) |
 | pagination.tpl | Basic pagination. |
 | reports-filter-financialyear.tpl | Dropdown for financial years. |
 | reports-filter-month.tpl | Dropdown for months |
