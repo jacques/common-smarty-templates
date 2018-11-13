@@ -25,18 +25,18 @@
 {elseif '3.3.7' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"}
 {/if}
-{* We default to fontawesome 5.2.0 so we don't break sites.  We also include the v4 shims *}
+{* We default to fontawesome 5.5.0 so we don't break sites.  We also include the v4 shims *}
 {if !isset($fontawesome_version)}
-{assign var="fontawesome_version" value="5.2.0"}
+{assign var="fontawesome_version" value="5.5.0"}
 {/if}
-{assign var="fontawesome_sha256" value="sha256-d0VTszOcDGrua7Yqg3DguaYDR0ZhHVXMsQVRoyvATC4="}
-{assign var="fontawesome_sha512" value="sha512-sZn9DcXhEg78CbcZi6/4/oZiv5SgjhevlBaV1Atlp9xjniZLIBWQtqOTJ1EuZX4/UjEaujKzTwnzS0WKN/qUww=="}
-{assign var="fontawesome_shim_sha256" value="sha256-mUUlBZDlHpE163pIhj2ZJCZu9kF2YdJWy/lNpdkmiPc="}
-{assign var="fontawesome_shim_sha512" value="sha512-Hgpc16eBZD8p6aAZY+qAuZWMAFYi5i20PtSv1qUHkBP3IdENRJy1dg5t6XQCJg2bSMTWZCsYFPzzgC83UJoJ5g=="}
+{if '5.5.0' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"}
+{assign var="fontawesome_shim_sha384 value="sha384-vBDTb50BKnwbvJZ5ZC5dsGJNQydTI7ZoAjCeJkdta6nSewwGXCnppKI5lrIQX4Qu"}
+{/if}
 {if isset($usecdn) && true == $usecdn}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/{$bootstrap_version}/css/bootstrap.min.css" rel="stylesheet" integrity="{$bootstrap_sha384}" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/{$fontawesome_version}/js/all.js" integrity="{$fontawesome_sha256} {$fontawesome_sha512}" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/{$fontawesome_version}/js/v4-shims.js" integrity="{$fontawesome_sha256} {$fontawesome_sha512}" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v{$fontawesome_version}/js/all.js" integrity="{$fontawesome_sha384}" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v{$fontawesome_version}/js/v4-shims.js" integrity="{$fontawesome_shim_sha384}" crossorigin="anonymous"></script>
 {else}
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css?v={$bootstrap_version}" rel="stylesheet" integrity="{$bootstrap_sha384}" crossorigin="anonymous">
     <script defer src="/vendor/fontawesome/svg-with-js/js/fontawesome-all.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
