@@ -7,8 +7,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
+{if !isset($usecdn)}
+{assign var="usecdn" value=true}
+{/if}
 {if !isset($boottrap_version)}
 {assign var="bootstrap_version" value="3.3.7"}
+{assign var="bootstrap_js_version" value="3.3.7"}
 {/if}
 {if '4.1.3' == $bootstrap_version}
 {assign var="jquery_sha384" value="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"}
@@ -25,11 +29,11 @@
 {/if}
 {assign var="jquery_version" value="2.2.4"}
 {assign var="jquery_sha384" value="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"}
-{if isset($usecdn) && true == $usecdn}
+{if isset($usecdn) && true === $usecdn}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/{$jquery_version}/jquery.min.js" integrity="{$jquery_sha384}" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/vendor/jquery/dist/jquery.min.js" integrity="{$jquery_sha384}" crossorigin="anomyous"><\/script>')</script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/{$bootstrap_js_version}/js/bootstrap.min.js" integrity="{$bootstrap_js_sha384}" crossorigin="anonymous"></script>
 {else}
-  <script src="/vendor/jquery/dist/jquery.min.js" integrity="{$jquery_sha384}" crossorigin="anomyous"></script>
+  <script src="/vendor/jquery/dist/jquery.min.js?v={$jquery_version}" integrity="{$jquery_sha384}" crossorigin="anomyous"></script>
   <script src="/vendor/bootstrap/dist/js/bootstrap.min.js" integrity="{$bootstrap_js_sha384}" crossorigin="anonymous"></script>
 {/if}
