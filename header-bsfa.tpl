@@ -29,6 +29,7 @@
 {if !isset($fontawesome_version)}
 {assign var="fontawesome_version" value="5.6.1"}
 {/if}
+{assign var="bootstrap_old_dirs" value=false}
 {if '5.6.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ"}
 {assign var="fontawesome_shim_sha384" value="sha384-LqOeBjW8oAuwB6xooSoyjAV+CcJLQGftH6m0Xoo+mhJ0TlEAVR9jBsAXXpeEJlyP"}
@@ -38,6 +39,7 @@
 {elseif '5.5.0' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"}
 {assign var="fontawesome_shim_sha384" value="sha384-vBDTb50BKnwbvJZ5ZC5dsGJNQydTI7ZoAjCeJkdta6nSewwGXCnppKI5lrIQX4Qu"}
+{assign var="bootstrap_old_dirs" value=true}
 {/if}
 {if isset($usecdn) && true == $usecdn}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/{$bootstrap_version}/css/bootstrap.min.css" rel="stylesheet" integrity="{$bootstrap_sha384}" crossorigin="anonymous">
@@ -45,6 +47,11 @@
     <script defer src="https://use.fontawesome.com/releases/v{$fontawesome_version}/js/v4-shims.js" integrity="{$fontawesome_shim_sha384}" crossorigin="anonymous"></script>
 {else}
     <link href="/vendor/bootstrap/dist/css/bootstrap.min.css?v={$bootstrap_version}" rel="stylesheet" integrity="{$bootstrap_sha384}" crossorigin="anonymous">
+{if $bootstrap_old_dirs}
     <script defer src="/vendor/fontawesome/svg-with-js/js/fontawesome-all.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
     <script defer src="/vendor/fontawesome/svg-with-js/js/fa-v4-shims.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
+{else}
+    <script defer src="/vendor/fontawesome/js/all.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
+    <script defer src="/vendor/fontawesome/js/v4-shims.min.js?v={$fontawesome_version}" crossorigin="anonymous"></script>
+{/if}
 {/if}
