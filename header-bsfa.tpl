@@ -1,5 +1,5 @@
 {*
- * Include stylesheets for Bootstrap v3.3.7 and Font Awesome 5.2.0.
+ * Include stylesheets for Bootstrap v3.4.1 and Font Awesome 5.8.1.
  * If usecdn is set use the Bootstrap CDN provided by Max CDN otherwise
  * use a vendored copy under the document root.  For FontAwesome load
  * files from the Font Awesome CDN.
@@ -8,9 +8,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
-{* We default to bootstrap 3.3.7 so we don't break sites. *}
+{* We default to bootstrap 3.4.1 so we don't break sites. *}
 {if !isset($bootstrap_version)}
-{assign var="bootstrap_version" value="3.3.7"}
+{assign var="bootstrap_version" value="3.4.1"}
 {/if}
 {if '4.1.3' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"}
@@ -24,13 +24,18 @@
 {assign var="bootstrap_sha384" value="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"}
 {elseif '3.3.7' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"}
+{elseif '3.4.1' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"}
 {/if}
-{* We default to fontawesome 5.5.0 so we don't break sites.  We also include the v4 shims *}
+{* We default to fontawesome 5.8.1 so we don't break sites.  We also include the v4 shims *}
 {if !isset($fontawesome_version)}
-{assign var="fontawesome_version" value="5.6.1"}
+{assign var="fontawesome_version" value="5.8.1"}
 {/if}
 {assign var="bootstrap_old_dirs" value=false}
-{if '5.6.1' == $fontawesome_version}
+{if '5.8.1' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"}
+{assign var="fontawesome_shim_sha384" value="sha384-DWlD0qU0+4WTFKXrFbt8wXq/1NHvOGT8vwllYM0W2gIeqgaCC3bZ0U464mDtbR70"}
+{elseif '5.6.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ"}
 {assign var="fontawesome_shim_sha384" value="sha384-LqOeBjW8oAuwB6xooSoyjAV+CcJLQGftH6m0Xoo+mhJ0TlEAVR9jBsAXXpeEJlyP"}
 {elseif '5.6.0' == $fontawesome_version}

@@ -11,8 +11,8 @@
 {assign var="usecdn" value=true}
 {/if}
 {if !isset($boottrap_version)}
-{assign var="bootstrap_version" value="3.3.7"}
-{assign var="bootstrap_js_version" value="3.3.7"}
+{assign var="bootstrap_version" value="3.4.1"}
+{assign var="bootstrap_js_version" value="3.4.1"}
 {/if}
 {if '4.1.3' == $bootstrap_version}
 {assign var="jquery_sha384" value="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"}
@@ -24,6 +24,8 @@
 {assign var="jquery_sha384" value="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"}
 {elseif '4.0.0' == $bootstrap_version}
 {assign var="bootstrap_js_sha384" value="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"}
+{elseif '3.4.1' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"}
 {elseif '3.3.7' == $bootstrap_version}
 {assign var="bootstrap_js_sha384" value="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"}
 {/if}
