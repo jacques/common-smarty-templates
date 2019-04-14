@@ -22,6 +22,7 @@ your webroot.
 | header-bsfa.tpl | Include Bootstrap 3.4.1 and Font Awesome 5.8.1.  Pass in the template variable usecdn and set this to true to pull the assets from Bootstrap CDN. |
 | header-csrf.tpl | Add metadata to work with jquery-ui-rails so when doing POST / PUT / DELETE actions it passes the CSRF token along. |
 | header-shims.tpl   | Legacy IE bits served up by Max CDN. |
+| header-vue.tpl | Include vue.js development / production build via cdn.jsdelivr.net |
 | js-paymentgateway.tpl | Switch div layers based on payment method selected on a form. |
 | meta-ie.tpl | IE Comptibility Mode to Edge [see this post](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e) |
 | pagination.tpl | Basic pagination. |
