@@ -12,7 +12,15 @@
 {if !isset($bootstrap_version)}
 {assign var="bootstrap_version" value="3.4.1"}
 {/if}
-{if '4.1.3' == $bootstrap_version}
+{if '4.3.1' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"}
+{elseif '4.3.0' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"}
+{elseif '4.2.1' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"}
+{elseif '4.2.0' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-SlJL6LojdN8eNCOoIfK7KJ7SgRFeYBDu8tB1uxELbSAv+RVgD12pZmOcxTUTPXIg"}
+{elseif '4.1.3' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"}
 {elseif '4.1.2' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"}
@@ -32,7 +40,16 @@
 {assign var="fontawesome_version" value="5.8.1"}
 {/if}
 {assign var="bootstrap_old_dirs" value=false}
-{if '5.8.1' == $fontawesome_version}
+{if '5.10.1' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-aC/bNmpJEYrEVX5KNHN+m0CmvycQX9wDnYv8X2gdXQjrbtDP5OcU5DRiXwL6bPwr"}
+{assign var="fontawesome_shim_sha384" value="sha384-BtUWeH6hQDQGUZewQDmWRMisAxvs1LtqoVQgmbFptFnH1GpBw2b2vZenxfFmRtOS"}
+{elseif '5.10.0' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-BfzGEucsDAHnSR99xBvG8cNHx7h6sEbKJejtvqlMrN8nMi3gP2ds+sMAjWfWnZyn"}
+{assign var="fontawesome_shim_sha384" value="sha384-RT+uACaLSP2jOOLdRXKvxcgxA/WNa36UYkM14r9ODCgz51g7frfTdR+Jv3q46NW3"}
+{elseif '5.9.0' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-7Gk1S6elg570RSJJxILsRiq8o0CO99g1zjfOISrqjFUCjxHDn3TmaWoWOqt6eswF"}
+{assign var="fontawesome_shim_sha384" value="sha384-npD7syUhXOZUTbAzJEyIPGq/8gGAhBmei7JkUwUki9hAtz9oPkFJwx5f3vGb7SOi"}
+{elseif '5.8.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"}
 {assign var="fontawesome_shim_sha384" value="sha384-DWlD0qU0+4WTFKXrFbt8wXq/1NHvOGT8vwllYM0W2gIeqgaCC3bZ0U464mDtbR70"}
 {elseif '5.6.1' == $fontawesome_version}

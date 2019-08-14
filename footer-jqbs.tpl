@@ -14,14 +14,22 @@
 {assign var="bootstrap_version" value="3.4.1"}
 {assign var="bootstrap_js_version" value="3.4.1"}
 {/if}
-{if '4.1.3' == $bootstrap_version}
-{assign var="jquery_sha384" value="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"}
+{if '4.3.1' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"}
+{elseif '4.3.0' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"}
+{elseif '4.2.1' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"}
+{elseif '4.2.0' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-1AHwFvFDF+iQPDBasw2LKa8PdkI8aYv2ad2o197DHC8qr4LuwSe44JY1THkowrqg"}
+{elseif '4.1.3' == $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"}
 {elseif '4.1.2' == $bootstrap_version}
-{assign var="jquery_sha384" value="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"}
+{assign var="bootstrap_js_sha384" value="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"}
 {elseif '4.1.1' == $bootstrap_version}
-{assign var="jquery_sha384" value="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"}
+{assign var="bootstrap_js_sha384" value="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"}
 {elseif '4.1.0' == $bootstrap_version}
-{assign var="jquery_sha384" value="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"}
+{assign var="bootstrap_js_sha384" value="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"}
 {elseif '4.0.0' == $bootstrap_version}
 {assign var="bootstrap_js_sha384" value="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"}
 {elseif '3.4.1' == $bootstrap_version}
