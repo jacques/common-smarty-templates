@@ -13,7 +13,7 @@
 {assign var="bootstrap_version" value="3.4.1"}
 {/if}
 {if '4.3.1' == $bootstrap_version}
-{assign var="bootstrap_sha384" value="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"}
+{assign var="bootstrap_sha384" value="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"}
 {elseif '4.3.0' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"}
 {elseif '4.2.1' == $bootstrap_version}
