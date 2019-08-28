@@ -10,7 +10,7 @@
 {if !isset($usecdn)}
 {assign var="usecdn" value=true}
 {/if}
-{if !isset($boottrap_version)}
+{if !isset($bootstrap_version)}
 {assign var="bootstrap_version" value="3.4.1"}
 {assign var="bootstrap_js_version" value="3.4.1"}
 {/if}
