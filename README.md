@@ -39,7 +39,7 @@ your webroot.
 Pass in the ``bootstrap_version`` variable when you include the ``header-bsfa.tpl``
 and ``footer-jqbs.tpl`` if you want a different version of bootstrap css and js files
 included.  If you pass in the usecdn variable it will pull the bootstrap files from
-StackPath's CDN (was MaxCDN).
+StackPath's CDN (was previously using MaxCDN).
 
 ```html
 {include file="header-jbfa.tpl" bootstrap_version="4.1.3"}
@@ -49,6 +49,10 @@ StackPath's CDN (was MaxCDN).
 
  * 3.3.7
  * 3.4.1 (default)
+ * 4.3.1
+ * 4.3.0
+ * 4.2.1
+ * 4.2.0
  * 4.1.3
  * 4.1.2
  * 4.1.1
