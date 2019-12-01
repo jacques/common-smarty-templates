@@ -6,7 +6,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
- * Copyright 2013-2015 Jacques Marneweck.  All rights strictly reserved.
+ * Copyright 2013-2019 Jacques Marneweck.  All rights strictly reserved.
  *}
+
+{if isset($csrf)}
+    <meta name="csrf-token" content="{$csrf.name}" />
+    <meta name="csrf-param" content="{$csrf.value}" />
+{else}
     <meta name="csrf-token" content="{$csrf_token}">
     <meta name="csrf-param" content="{$csrf_key}">
+{/if}
