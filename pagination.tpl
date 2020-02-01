@@ -7,20 +7,20 @@
  *}
 
 <nav>
-  <ul class="pagination">
-    <li>
-      <a{if $page == 1} disabled{else} href="?page={$page-1}"{/if} aria-label="Previous">
+  <ul class="pagination mb-3">
+    <li class="page-item">
+      <a class="page-link" {if $page == 1} disabled{else} href="?page={$page-1}"{/if} aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
 {assign var=p value=1}
 {while $p < $pages}
-    <li{if $p == $page} class="active"{/if}><a href="?page={$p}">{$p}</a></li>
+    <li{if $p == $page} class="page-item active"{/if}><a class="page-link" href="?page={$p}">{$p}</a></li>
 {assign var=p value=$p+1}
 {/while}
-    <li{if $p == $page} class="active"{/if}><a href="?page={$p}">{$p}</a></li>
-    <li>
-      <a{if $page == $pages} disabled{else} href="?page={$pages}"{/if} aria-label="Next">
+    <li{if $p == $page} class="page-item active"{/if}><a class="page-link" href="?page={$p}">{$p}</a></li>
+    <li class="page-item">
+      <a class="page-link" {if $page == $pages} disabled{else} href="?page={$pages}"{/if} aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
