@@ -17,10 +17,12 @@ your webroot.
 | country_e164.tpl | Dropdowns of country codes.  Pass in filter_sadc=true to filter for [SADC](https://en.wikipedia.org/wiki/Southern_African_Development_Community) countries. Dropdown selection takes field parameter (i.e. if you use mobile_phone_country for this, use like field="mobile_phone_country" when including the template. |
 | csrf.tpl | Output CSRF token and variable name.  Assumes these variables are assigned to Smarty. |
 | footer-datepicker.tpl | Include the bootstrap-datepicker javascript includes. |
+| footer-fingerprint.tpl | Use fingerprint2 library to populate the brower fingerprint into the fingerprint field. |
 | footer-jqbs.tpl | Include jquery 2.1.4 and bootstrap 3.4.1 javascript files. |
 | gauges.tpl | include gaug.es tracking code |
 | header-bsfa.tpl | Include Bootstrap 3.4.1 and Font Awesome 5.8.1.  Pass in the template variable usecdn and set this to true to pull the assets from Bootstrap CDN. |
 | header-csrf.tpl | Add metadata to work with jquery-ui-rails so when doing POST / PUT / DELETE actions it passes the CSRF token along. |
+| header-fingerprint.tpl | Include fingerprint2 javascript library. |
 | header-shims.tpl   | Legacy IE bits served up by Max CDN. |
 | header-vue.tpl | Include vue.js development / production build via cdn.jsdelivr.net |
 | js-paymentgateway.tpl | Switch div layers based on payment method selected on a form. |
