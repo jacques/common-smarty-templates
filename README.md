@@ -33,6 +33,7 @@ your webroot.
 | reports-filter-payrollgroup.tpl | Filter by payroll group |
 | staging-ribbon.tpl | Shows a staging ribbon onto a page. |
 | utf8.tpl | Set utf8 character to determine if browser submitting data is utf8 or not. |
+| validation-errors.tpl | Used to display errors from form validation with Valitron. |
 
 ---
 
