@@ -11,13 +11,13 @@
 
     <div class="form-group dynamic-date-filter" id="dateFilter">
         <label class="sr-only" for="inputDate">Date</label>
-        <input type="text" class="form-control" name="date" id="inputDate" placeholder="Date" value="{if isset($start_date)}{$start_date}{/if}">
+        <input type="text" class="form-control" name="date" id="inputDate" placeholder="Date" value="{if isset($start_date)}{$start_date|escape}{/if}">
     </div>
 
     <div class="form-group dynamic-date-filter" id="rangeFilter">
         <label class="sr-only" for="inputDateFrom">From</label>
-        <input type="text" class="form-control" name="date_from" id="inputDateFrom" placeholder="From" value="{if isset($start_date)}{$start_date}{/if}">
+        <input type="text" class="form-control" name="date_from" id="inputDateFrom" placeholder="From" value="{if isset($start_date)}{$start_date|escape}{/if}">
         <label class="sr-only" for="inputDateTo">From</label>
-        <input type="text" class="form-control" name="date_to" id="inputDateTo" placeholder="To" value="{if isset($end_date)}{$end_date}{/if}">
+        <input type="text" class="form-control" name="date_to" id="inputDateTo" placeholder="To" value="{if isset($end_date)}{$end_date|escape}{/if}">
     </div>
 

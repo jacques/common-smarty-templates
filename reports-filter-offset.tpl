@@ -9,7 +9,7 @@
     <label class="sr-only" for="month">Offset</label>
     <select name="offset" class="form-control">
 {foreach $offsets item=val}
-      <option value="{$val}"{if $val == $offset} selected{/if}>{$val}</option>
+      <option value="{$val|escape}"{if $val == $offset} selected{/if}>{$val|escape}</option>
 {/foreach}
     </select>
   </div>

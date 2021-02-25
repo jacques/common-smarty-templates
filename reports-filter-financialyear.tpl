@@ -9,7 +9,7 @@
     <label class="sr-only" for="period">Period</label>
     <select name="period" class="form-control">
 {foreach $periods item=row}
-      <option value="{$row.start}||{$row.end}"{if isset($period) && $period eq $row.period} selected{/if}>{$row.label}</option>
+      <option value="{$row.start|escape}||{$row.end|escape}"{if isset($period) && $period eq $row.period} selected{/if}>{$row.label|escape}</option>
 {/foreach}
     </select>
   </div>

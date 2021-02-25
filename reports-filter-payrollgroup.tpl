@@ -9,7 +9,7 @@
     <label class="sr-only" for="month">Payroll Group</label>
     <select name="month" class="form-control">
 {foreach $payrollgroups item=row}
-      <option value="{$row.id}"{if $payrollgroup_id eq $row.id} selected{/if}>{$row.name|escape}</option>
+      <option value="{$row.id|escape}"{if $payrollgroup_id eq $row.id} selected{/if}>{$row.name|escape}</option>
 {/foreach}
     </select>
   </div>
