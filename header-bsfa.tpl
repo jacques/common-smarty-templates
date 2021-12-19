@@ -30,10 +30,10 @@
 {assign var="bootstrap_sha384" value="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"}
 {elseif '4.0.0' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"}
-{elseif '3.3.7' == $bootstrap_version}
-{assign var="bootstrap_sha384" value="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"}
 {elseif '3.4.1' == $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"}
+{elseif '3.3.7' == $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"}
 {/if}
 {* We default to fontawesome 5.8.1 so we don't break sites.  We also include the v4 shims *}
 {if !isset($fontawesome_version)}
