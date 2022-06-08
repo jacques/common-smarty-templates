@@ -48,7 +48,7 @@
 {assign var="prod_vue_sha512" value="sha512-UtZg4Q8FiRAVpCWnwTyEpZ9o4s2IFZdiLCsldvVqXTnLg78EldA/RipIBBBHSo4P7TcBUR4DOO8MhzH0pcH4ZQ=="}
 {/if}
 {* Allow the non production builds on development environments. *}
-{if in_array($globals.env, ['development', 'dev'])}
+{if isset($globals) && in_array($globals.env, ['development', 'dev'])}
 <script src="{$asset_url|escape}" integrity="{$vue_sha256} {$vue_sha384} {$vue_sha512}" crossorigin="anonymous"></script>
 {else}
 <script src="{$prod_asset_url|escape}" integrity="{$prod_vue_sha256} {$prod_vue_sha384} {$prod_vue_sha512}" crossorigin="anonymous"></script>
