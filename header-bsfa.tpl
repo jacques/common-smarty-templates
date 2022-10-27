@@ -70,32 +70,51 @@
 {assign var="bootstrap_sha384" value="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"}
 {assign var="bootstrap_sha512" value="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="}
 {/if}
-{* We default to fontawesome 5.8.1 so we don't break sites.  We also include the v4 shims *}
+{* We default to fontawesome 5.15.4 so we don't break sites.  We also include the v4 shims *}
 {if !isset($fontawesome_version)}
-{assign var="fontawesome_version" value="5.8.1"}
+{assign var="fontawesome_version" value="5.15.4"}
 {/if}
 {assign var="bootstrap_old_dirs" value=false}
-{if '5.10.1' == $fontawesome_version}
+{if '5.15.4' == $fontawesome_version}
+{assign var="fontawesome_sha384" value="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"}
+{assign var="fontawesome_sha512" value="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="}
+{assign var="fontawesome_shim_sha384" value="sha384-bx00wqJq+zY9QLCMa/zViZPu1f0GJ3VXwF4GSw3GbfjwO28QCFr4qadCrNmJQ/9N"}
+{assign var="fontawesome_shim_sha512" value="sha512-VoCKE84b8mEoHVEtuynO91AlOwMwqkmqfYidt+Jykpqo0EXgQq1Ya9OT+QX4o4CD3TAmf9o4Q0EJY2aq0uNUDQ=="}
+{elseif '5.10.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-aC/bNmpJEYrEVX5KNHN+m0CmvycQX9wDnYv8X2gdXQjrbtDP5OcU5DRiXwL6bPwr"}
+{assign var="fontawesome_sha512" value="sha512-RrtwICYYs1c9DkysKFweSRfI6iYytLSichNOU6bXlHiHN3HBLceySBmuOZBqVmfsTHTuSDoTq50eQDuwDjaHcg=="}
 {assign var="fontawesome_shim_sha384" value="sha384-BtUWeH6hQDQGUZewQDmWRMisAxvs1LtqoVQgmbFptFnH1GpBw2b2vZenxfFmRtOS"}
+{assign var="fontawesome_shim_sha512" value="sha512-+2nwtVo6LXrc+mdyZm9YdTxjO4ZzRFtwDoS/LdyAiSumHJgsLySRTQd5URjrwDWBqFeCVec4GQ78sNgRR+pSqg=="}
 {elseif '5.10.0' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-BfzGEucsDAHnSR99xBvG8cNHx7h6sEbKJejtvqlMrN8nMi3gP2ds+sMAjWfWnZyn"}
+{assign var="fontawesome_sha512" value="sha512-I2eVORN4ZTPhAiP2pz5d6wQ3ScD/h7ORW4WoCsl3/neI8RSrRnBl2kW3myjTUN+J0Ml4fRT31ZLz08gQb/eo1g=="}
 {assign var="fontawesome_shim_sha384" value="sha384-RT+uACaLSP2jOOLdRXKvxcgxA/WNa36UYkM14r9ODCgz51g7frfTdR+Jv3q46NW3"}
+{assign var="fontawesome_shim_sha512" value="sha512-YAC9yYM4pXSpOjtjsa/clU5HBmpxj8OGFL8fTlITmYY8qzIPshwwvEKDC+jLe2xvcx9FsSKEKSDLygkVuxXozg=="}
 {elseif '5.9.0' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-7Gk1S6elg570RSJJxILsRiq8o0CO99g1zjfOISrqjFUCjxHDn3TmaWoWOqt6eswF"}
+{assign var="fontawesome_sha512" value="sha512-LW9+kKj/cBGHqnI4ok24dUWNR/e8sUD8RLzak1mNw5Ja2JYCmTXJTF5VpgFSw+VoBfpMvPScCo2DnKTIUjrzYw=="}
 {assign var="fontawesome_shim_sha384" value="sha384-npD7syUhXOZUTbAzJEyIPGq/8gGAhBmei7JkUwUki9hAtz9oPkFJwx5f3vGb7SOi"}
+{assign var="fontawesome_shim_sha512" value="sha512-91m+ZGg5aSL6XUpAOw+c8vzTsNw2lwwQow/mqunXctqfMV1/d1b/fWF8m10bxnF0qJ3bEHSQuvv0bKqR3AEiiQ=="}
 {elseif '5.8.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"}
+{assign var="fontawesome_sha512" value="sha512-jAu66pqHWWQ564NS+m2Zxe13Yek98R7JWNjQLzW+PQ4i2jsMxBT1nGrQ0gFUIVJ4kPkEFe5gelBWNEDTBqmn/w=="}
 {assign var="fontawesome_shim_sha384" value="sha384-DWlD0qU0+4WTFKXrFbt8wXq/1NHvOGT8vwllYM0W2gIeqgaCC3bZ0U464mDtbR70"}
+{assign var="fontawesome_shim_sha512" value="sha512-gQHGzEBSUyWKxickdRKdoZvP/QRMdHi5hZ6QqkAEaS+sBKGXhb01LGVdYt/+ECwOBKjLrz5aatq1f9AJkMDvvQ=="}
 {elseif '5.6.1' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ"}
+{assign var="fontawesome_sha512" value="sha512-FgxMTdWFMF8xo1dwSOo9vQFgJuPPU2lox0YwZ/gXkm7mFgBYhBGh77G6+5baaxAPLfBeEsPufNc36fEpiCO21A=="}
 {assign var="fontawesome_shim_sha384" value="sha384-LqOeBjW8oAuwB6xooSoyjAV+CcJLQGftH6m0Xoo+mhJ0TlEAVR9jBsAXXpeEJlyP"}
+{assign var="fontawesome_shim_sha512" value="sha512-KvNNfVlINlTTalrnig3Hd34S6wd5JeUzn1psSiCLSSA8opj7QqtSjQ0RLoeNsczuDCHoojkSe+aBbWPzv7ciEA=="}
 {elseif '5.6.0' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI"}
+{assign var="fontawesome_sha512" value="sha512-kWTrl8apDL/aScTYauVsRnGkZv4n7JpH03mIdTmiELoAvAT+CGmfBQx03EMkTT34f5jvyY0DRa/M/it7iecBKw=="}
 {assign var="fontawesome_shim_sha384" value="sha384-08SAgv7bDUyzB5O71dehOCZ42IpryGqW/G+GdxeFmBfaB71QIZWe5ZXBFKYFTEu4"}
+{assign var="fontawesome_shim_sha512" value="sha512-QMAcII8x5nKxhpwX4A5H1chEhXG0i/1FlDn7sEziqAT4CKURoslSPdohulq2lmcSPq2puI3g103k6ztVSpZlQQ=="}
 {elseif '5.5.0' == $fontawesome_version}
 {assign var="fontawesome_sha384" value="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"}
+{assign var="fontawesome_sha512" value="sha512-YUwFoN1yaVzHxZ1cLsNYJzVt1opqtVLKgBQ+wDj+JyfvOkH66ck1fleCm8eyJG9O1HpKIf86HrgTXkWDyHy9HA=="}
 {assign var="fontawesome_shim_sha384" value="sha384-vBDTb50BKnwbvJZ5ZC5dsGJNQydTI7ZoAjCeJkdta6nSewwGXCnppKI5lrIQX4Qu"}
+{assign var="fontawesome_shim_sha512" value="sha512-MbBIp7VUHm3wxvHkRMqaQup4prDshpEIEQt5FT/Mq6KO8KhOu8zJ29wMfNCJBqMfVgXIUgnl9k5gOWSeXft7yw=="}
 {assign var="bootstrap_old_dirs" value=true}
 {/if}
 {if isset($usecdn) && true == $usecdn}
