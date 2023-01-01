@@ -72,8 +72,12 @@
 {assign var="bootstrap_js_sha384" value="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"}
 {assign var="bootstrap_js_sha512" value="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ=="}
 {/if}
-{assign var="jquery_version" value="2.2.4"}
+{assign var="jquery_version" value="3.6.1"}
+{if '3.6.1' === $jquery_version}
+{assign var="jquery_sha384" value="sha384-i61gTtaoovXtAbKjo903+O55Jkn2+RtzHtvNez+yI49HAASvznhe9sZyjaSHTau9"}
+{elseif '2.2.4' === $jquery_version}
 {assign var="jquery_sha384" value="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"}
+{/if}
 {if isset($usecdn) && true === $usecdn}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/{$jquery_version}/jquery.min.js" integrity="{$jquery_sha384}" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/vendor/jquery/dist/jquery.min.js" integrity="{$jquery_sha384}" crossorigin="anomyous"><\/script>')</script>
