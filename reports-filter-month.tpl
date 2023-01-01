@@ -9,7 +9,11 @@
     <label class="sr-only" for="month">Month</label>
     <select name="month" class="form-control">
 {foreach $months item=row}
-      <option value="{$row.month_yyyymm|escape}"{if (isset($month) && is_array($month) && array_key_exists('month', $month) && $month.month eq $row.month_yyyymm) || $month eq $row.month_yyyymm} selected{/if}>{$row.month_name|escape}</option>
+{if is_string($row)}
+      <option value="{$row|escape}"{if isset($month) && $row === $month} selected{/if}>{$row|escape}</option>
+{elseif is_array($row)}
+      <option value="{if array_key_exists('month_yyyymm', $row)}{$row.month_yyyymm|escape}{else}{$row.month|escape}{/if}"{if (isset($month) &&$row == $month) || (isset($month) && is_array($month) && array_key_exists('month', $month) && $month.month eq $row.month_yyyymm) || $month eq $row.month_yyyymm} selected{/if}>{if array_key_exists('month_name', $row)}{$row.month_name|escape}{/if}</option>
+{/if}
 {/foreach}
     </select>
   </div>
