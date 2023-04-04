@@ -8,11 +8,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *}
-{* We default to bootstrap 5.2.0 so we don't break sites. *}
+{* We default to bootstrap 5.2.3 so we don't break sites. *}
 {if !isset($bootstrap_version)}
-{assign var="bootstrap_version" value="5.2.2"}
+{assign var="bootstrap_version" value="5.2.3"}
 {/if}
-{if '5.2.2' === $bootstrap_version}
+{if '5.2.3' === $bootstrap_version}
+{assign var="bootstrap_sha384" value="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"}
+{assign var="bootstrap_sha512" value="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="}
+{elseif '5.2.2' === $bootstrap_version}
 {assign var="bootstrap_sha384" value="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"}
 {assign var="bootstrap_sha512" value="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="}
 {elseif '5.2.1' === $bootstrap_version}

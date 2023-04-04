@@ -11,10 +11,13 @@
 {assign var="usecdn" value=true}
 {/if}
 {if !isset($bootstrap_version)}
-{assign var="bootstrap_version" value="5.2.2"}
-{assign var="bootstrap_js_version" value="5.2.2"}
+{assign var="bootstrap_version" value="5.2.3"}
+{assign var="bootstrap_js_version" value="5.2.3"}
 {/if}
-{if '5.2.2' === $bootstrap_version}
+{if '5.2.3' === $bootstrap_version}
+{assign var="bootstrap_js_sha384" value="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"}
+{assign var="bootstrap_js_sha512" value="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="}
+{elseif '5.2.2' === $bootstrap_version}
 {assign var="bootstrap_js_sha384" value="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"}
 {assign var="bootstrap_js_sha512" value="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="}
 {elseif '5.2.1' === $bootstrap_version}
