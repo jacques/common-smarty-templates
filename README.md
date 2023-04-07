@@ -18,9 +18,9 @@ your webroot.
 | csrf.tpl | Output CSRF token and variable name.  Assumes these variables are assigned to Smarty. |
 | footer-datepicker.tpl | Include the bootstrap-datepicker javascript includes. |
 | footer-fingerprint.tpl | Use fingerprint2 library to populate the brower fingerprint into the fingerprint field. |
-| footer-jqbs.tpl | Include jquery 2.1.4 and bootstrap 3.4.1 javascript files. |
+| footer-jqbs.tpl | Include jquery 2.1.4 and bootstrap 5.2.3 javascript files. |
 | gauges.tpl | include gaug.es tracking code |
-| header-bsfa.tpl | Include Bootstrap 3.4.1 and Font Awesome 5.8.1.  Pass in the template variable usecdn and set this to true to pull the assets from Bootstrap CDN. |
+| header-bsfa.tpl | Include Bootstrap 5.2.3 and Font Awesome 5.8.1.  Pass in the template variable usecdn and set this to true to pull the assets from Bootstrap CDN. |
 | header-csrf.tpl | Add metadata to work with jquery-ui-rails so when doing POST / PUT / DELETE actions it passes the CSRF token along. |
 | header-fingerprint.tpl | Include fingerprint2 javascript library. |
 | header-shims.tpl   | Legacy IE bits served up by Max CDN. |
