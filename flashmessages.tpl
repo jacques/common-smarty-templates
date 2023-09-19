@@ -5,7 +5,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
- * Copyright 2013-2021 Jacques Marneweck.  All rights strictly reserved.
+ * Copyright 2013-2023 Jacques Marneweck.  All rights strictly reserved.
  *}
 {* Slim 1.x / 2.x *}
 {if isset($smarty.session.flash.errors)}<div class="alert alert-danger" role="alert">{$smarty.session.flash.errors.0}</div>{/if}
@@ -14,7 +14,7 @@
 {assign var="flashmsgs" value=$flash->getMessages()}
 {if isset($flashmsgs['errors'])}
 {foreach $flashmsgs['errors'] item=error}
-<div class="alert alert-primary" role="alert">{$error}</div>
+<div class="alert alert-{if !isset($errorclass)}primary{else}{$errorclass|escape}{/if}" role="alert">{$error}</div>
 {/foreach}
 {/if}
 {if isset($flashmsgs['success'])}
