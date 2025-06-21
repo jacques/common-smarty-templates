@@ -20,6 +20,7 @@ your webroot.
 | footer-fingerprint.tpl | Use fingerprint2 library to populate the brower fingerprint into the fingerprint field. |
 | footer-jqbs.tpl | Include jquery 2.1.4 and bootstrap 5.2.3 javascript files. |
 | gauges.tpl | include gaug.es tracking code |
+| google-maps.tpl | Includes Google Maps Javascript API. |
 | header-bsfa.tpl | Include Bootstrap 5.2.3 and Font Awesome 5.8.1.  Pass in the template variable usecdn and set this to true to pull the assets from Bootstrap CDN. |
 | header-csrf.tpl | Add metadata to work with jquery-ui-rails so when doing POST / PUT / DELETE actions it passes the CSRF token along. |
 | header-fingerprint.tpl | Include fingerprint2 javascript library. |
